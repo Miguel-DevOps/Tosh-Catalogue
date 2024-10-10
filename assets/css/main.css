@@ -1,10 +1,10 @@
-@import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+@font-face {
+	font-family: "ITC Avant Garde Gothic LT Demi";
+	src: url('/assets/webfonts/ITC\ Avant\ Garde\ Gothic\ LT\ Demi.ttf');
+}
 
 /*
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Template was created by HTML5 UP
 */
 
 html, body, div, span, applet, object,
@@ -117,7 +117,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "ITC Avant Garde Gothic LT Demi", sans-serif;
 		font-size: 17pt;
 		font-weight: 300;
 		letter-spacing: 0.025em;
