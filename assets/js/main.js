@@ -332,4 +332,19 @@
 
 			});
 
+	// Scroll buttons.
+	document.getElementById('scroll_up').addEventListener('click', function() {
+		window.scrollBy({
+			top: -8000, // Adjust the value as needed
+			behavior: 'smooth'
+		});
+	});
+
+	document.getElementById('scroll_down').addEventListener('click', function() {
+		window.scrollBy({
+			top: 820, // Adjust the value as needed
+			behavior: 'smooth'
+		});
+	});
+
 })(jQuery);

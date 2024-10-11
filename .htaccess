@@ -2,3 +2,21 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/css "access plus 1 day"        # Archivos CSS se almacenan por un día
+    ExpiresByType application/javascript "access plus 1 day" # Archivos JS se almacenan por un día
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Configura Cache-Control para archivos estáticos
+    Header set Cache-Control "public, max-age=86400" # 1 día en segundos
+    # Opcional: Para desactivar caché para HTML
+    <FilesMatch "\.(html)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+</IfModule>
