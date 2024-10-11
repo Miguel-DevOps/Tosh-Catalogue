@@ -342,7 +342,7 @@
 
 	document.getElementById('scroll_down').addEventListener('click', function() {
 		window.scrollBy({
-			top: 820, // Adjust the value as needed
+			top: 800, // Adjust the value as needed
 			behavior: 'smooth'
 		});
 	});
