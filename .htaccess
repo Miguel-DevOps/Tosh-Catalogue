@@ -2,10 +2,3 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
-
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresDefault "access plus 1 month"
-    ExpiresByType text/css "access plus 1 day"        # Archivos CSS se almacenan por un día
-    ExpiresByType application/javascript "access plus 1 day" # Archivos JS se almacenan por un día
-</IfModule>
